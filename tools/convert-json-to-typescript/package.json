@@ -1,0 +1,26 @@
+{
+  "name": "@mcp-tools/convert-json-to-typescript",
+  "version": "0.1.0",
+  "description": "MCP tool server: Convert JSON to TypeScript interfaces",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "@mcp-tools/convert-json-to-typescript": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mcp-tools/core": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "files": ["dist"],
+  "license": "MIT"
+}
