@@ -1,19 +1,37 @@
-# ⚡ MCP Tools
+# ⚡ MCP Tools — Developer Utility Servers for AI Coding Assistants
 
-A growing monorepo of high-impact [Model Context Protocol](https://modelcontextprotocol.io) tool servers for AI-assisted development. Works with **Claude Desktop**, **OpenAI**, **GitHub Copilot**, **Azure AI**, and any MCP-compatible client.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue?logo=typescript)](https://typescriptlang.org)
+[![MCP](https://img.shields.io/badge/MCP-Compatible-brightgreen)](https://modelcontextprotocol.io)
+[![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-green?logo=node.js)](https://nodejs.org)
 
-> **30 tools shipped. 50 more incoming. 1000 planned.**
+The **fastest-growing open-source collection** of [Model Context Protocol](https://modelcontextprotocol.io) tool servers — purpose-built for AI-assisted development.
+
+**30 tools live · 50 shipping soon · hundreds more to come**
+
+Works out of the box with **Claude Desktop** · **VS Code Copilot** · **Cursor** · **Windsurf** · **OpenAI** · **Azure AI** — any MCP-compatible client.
 
 ---
 
-## Installation
+## Why MCP Tools?
+
+🔌 **Plug and play** — each tool is a standalone MCP server, ready in seconds  
+🧰 **Real developer utilities** — formatters, validators, converters, analyzers, generators  
+🪶 **Lightweight** — zero heavy dependencies, most tools use only Node.js built-ins  
+🏗️ **Monorepo architecture** — shared core library, consistent APIs, easy to extend  
+📦 **Independently publishable** — every tool ships as its own npm package  
+🌐 **Cross-platform** — works with any MCP client, not locked to one provider  
+
+---
+
+## Quick Start
 
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) >= 18
 - [pnpm](https://pnpm.io/) >= 9
 
-### Setup
+### Install & Build
 
 ```bash
 git clone https://github.com/seraphinerenard/mcp-tools.git
@@ -22,15 +40,9 @@ pnpm install
 pnpm build
 ```
 
-### Using a Tool
+### Add a Tool to Your AI Assistant
 
-Each tool is a standalone MCP server. Run any tool directly:
-
-```bash
-node tools/<tool-name>/dist/index.js
-```
-
-Or add it to your MCP client config (e.g. Claude Desktop `claude_desktop_config.json`):
+Each tool is a standalone MCP server. Add any tool to your client config — for example, in Claude Desktop (`claude_desktop_config.json`):
 
 ```json
 {
@@ -43,70 +55,82 @@ Or add it to your MCP client config (e.g. Claude Desktop `claude_desktop_config.
 }
 ```
 
+Or run directly:
+
+```bash
+node tools/format-json/dist/index.js
+```
+
 ---
 
-## 🟢 Available Tools (30)
+## 🟢 Available Tools
 
-### Analyzers
-| Tool | Description |
+### 🔍 Analyzers — Code Quality, Security & Performance
+
+| Tool | What It Does |
 |------|-------------|
-| `analyze-bundle-size` | Estimate JS bundle size impact of a dependency |
-| `analyze-code-complexity` | Cyclomatic complexity analysis |
-| `analyze-git-diff` | Git diff statistics and analysis |
+| `analyze-bundle-size` | Estimate JavaScript bundle size impact of any dependency |
+| `analyze-code-complexity` | Cyclomatic complexity analysis for any language |
+| `analyze-git-diff` | Git diff statistics, file-level breakdowns, and change analysis |
 | `analyze-npm-vulnerabilities` | Deep vulnerability scan of package-lock.json |
 
-### Converters
-| Tool | Description |
-|------|-------------|
-| `convert-csv-to-json` | CSV to structured JSON with type inference |
-| `convert-curl-to-fetch` | curl commands to JavaScript fetch |
-| `convert-json-to-typescript` | JSON to TypeScript interfaces |
-| `convert-markdown-to-html` | Markdown to HTML with GFM support |
-| `convert-units` | Unit conversion (length, weight, volume, data, temp) |
-| `convert-yaml-to-json` | YAML to JSON with anchor resolution |
+### 🔄 Converters — Data Transformation & Format Conversion
 
-### Formatters
-| Tool | Description |
+| Tool | What It Does |
 |------|-------------|
-| `format-json` | Pretty-print, minify, sort keys, validate JSON |
-| `format-sql` | Format SQL queries with keyword casing |
-| `minify-css` | CSS minification |
-| `minify-js` | Basic JS minification |
-| `prettify-html` | HTML formatting with indentation |
+| `convert-csv-to-json` | CSV to structured JSON with automatic type inference |
+| `convert-curl-to-fetch` | Translate curl commands to JavaScript fetch calls |
+| `convert-json-to-typescript` | Generate TypeScript interfaces from JSON data |
+| `convert-markdown-to-html` | Markdown to HTML with full GitHub Flavored Markdown support |
+| `convert-units` | Convert between length, weight, volume, data, and temperature units |
+| `convert-yaml-to-json` | YAML to JSON with anchor and alias resolution |
 
-### Generators
-| Tool | Description |
-|------|-------------|
-| `generate-dockerfile` | Dockerfile generation from project context |
-| `generate-lorem-ipsum` | Placeholder text generation |
-| `generate-password` | Cryptographically secure passwords with entropy |
-| `generate-regex` | Test and get common regex patterns |
-| `generate-uuid` | Generate random UUIDs (v4) |
+### 🎨 Formatters & Minifiers — Clean Up Code in Seconds
 
-### Validators
-| Tool | Description |
+| Tool | What It Does |
 |------|-------------|
-| `validate-email` | Email validation with disposable detection |
-| `validate-json-schema` | Validate JSON against JSON Schema |
-| `validate-openapi` | OpenAPI spec validation |
-| `validate-url` | URL validation and parsing |
+| `format-json` | Pretty-print, minify, sort keys, and validate JSON |
+| `format-sql` | Format SQL queries with configurable keyword casing |
+| `minify-css` | Strip whitespace and comments from CSS |
+| `minify-js` | Basic JavaScript minification |
+| `prettify-html` | Auto-indent and format HTML documents |
 
-### Utilities
-| Tool | Description |
+### 🏭 Generators — Scaffold Files and Data Instantly
+
+| Tool | What It Does |
 |------|-------------|
-| `calculate-date` | Date arithmetic, diff, and info |
-| `diff-text` | Line-by-line text comparison with LCS |
-| `encode-decode-base64` | Encode/decode base64, URL-safe variant |
-| `hash-text` | Hash text (MD5, SHA1, SHA256, SHA512) |
-| `lint-markdown` | Markdown linting for common issues |
-| `security-scan-headers` | HTTP security header analysis |
+| `generate-dockerfile` | Generate Dockerfiles from project context |
+| `generate-lorem-ipsum` | Placeholder text in paragraphs, sentences, or words |
+| `generate-password` | Cryptographically secure passwords with entropy scoring |
+| `generate-regex` | Test strings and retrieve common regex patterns |
+| `generate-uuid` | Generate RFC 4122 v4 UUIDs |
+
+### ✅ Validators — Catch Errors Before They Ship
+
+| Tool | What It Does |
+|------|-------------|
+| `validate-email` | Email validation with disposable domain detection |
+| `validate-json-schema` | Validate JSON documents against JSON Schema drafts |
+| `validate-openapi` | Full OpenAPI 3.x specification validation |
+| `validate-url` | URL parsing, validation, and component extraction |
+
+### 🛠️ Utilities — Everyday Developer Helpers
+
+| Tool | What It Does |
+|------|-------------|
+| `calculate-date` | Date arithmetic, diffs, weekday lookups, and timezone info |
+| `diff-text` | Line-by-line text comparison using LCS algorithm |
+| `encode-decode-base64` | Encode and decode base64 with URL-safe variant support |
+| `hash-text` | Hash text with MD5, SHA-1, SHA-256, or SHA-512 |
+| `lint-markdown` | Detect common Markdown issues and style violations |
+| `security-scan-headers` | Analyse HTTP security headers and score your config |
 
 ---
 
-## 🟡 Coming Soon (50)
+## 🟡 Coming Soon — Next 50 Tools
 
 ### Data Transformation
-| Tool | Description |
+| Tool | What It Does |
 |------|-------------|
 | `convert-json-to-yaml` | JSON to YAML with comment preservation |
 | `convert-xml-to-json` | XML to JSON with attribute handling |
@@ -120,51 +144,51 @@ Or add it to your MCP client config (e.g. Claude Desktop `claude_desktop_config.
 | `convert-json-schema-to-typescript` | JSON Schema to TypeScript interfaces |
 | `convert-json-schema-to-zod` | JSON Schema to Zod validators |
 | `convert-graphql-to-typescript` | GraphQL schema to TypeScript types |
-| `convert-cron-to-human` | Cron expression to human-readable text |
-| `convert-human-to-cron` | Natural language to cron expression |
-| `convert-timestamp-formats` | Between Unix/ISO/RFC2822/relative timestamps |
-| `convert-color-formats` | Between hex/rgb/hsl/cmyk/oklch |
+| `convert-cron-to-human` | Cron expressions to human-readable text |
+| `convert-human-to-cron` | Natural language to cron expressions |
+| `convert-timestamp-formats` | Between Unix, ISO 8601, RFC 2822, and relative timestamps |
+| `convert-color-formats` | Between hex, RGB, HSL, CMYK, and OKLCH |
 | `convert-har-to-curl` | HAR network logs to curl commands |
-| `convert-regex-to-explanation` | Regex pattern to human-readable explanation |
+| `convert-regex-to-explanation` | Regex patterns to plain English explanations |
 
 ### Code Quality & Analysis
-| Tool | Description |
+| Tool | What It Does |
 |------|-------------|
 | `analyze-code-duplication` | Detect copy-paste code across files |
-| `analyze-dead-code` | Find unused exports, functions, variables |
+| `analyze-dead-code` | Find unused exports, functions, and variables |
 | `analyze-import-graph` | Dependency graph and circular import detection |
-| `analyze-license-compliance` | Check dependency licenses against policy |
+| `analyze-license-compliance` | Check dependency licenses against your policy |
 | `analyze-api-breaking-changes` | Compare two API specs for breaking changes |
-| `analyze-hardcoded-secrets` | Scan for hardcoded secrets, keys, tokens |
-| `analyze-todo-tracker` | Extract and categorise all TODO/FIXME/HACK comments |
+| `analyze-hardcoded-secrets` | Scan for hardcoded secrets, keys, and tokens |
+| `analyze-todo-tracker` | Extract and categorise TODO, FIXME, and HACK comments |
 | `analyze-dependency-freshness` | How outdated are your dependencies |
-| `analyze-typescript-strict` | Find TS strictness issues (any, implicit, etc) |
-| `analyze-react-performance` | Detect unnecessary re-renders, missing keys |
-| `analyze-css-unused` | Find unused CSS selectors against HTML/JSX |
+| `analyze-typescript-strict` | Find TypeScript strictness issues |
+| `analyze-react-performance` | Detect unnecessary re-renders and missing keys |
+| `analyze-css-unused` | Find unused CSS selectors |
 | `analyze-sql-injection-risk` | Static analysis for SQL injection patterns |
-| `analyze-docker-image-size` | Dockerfile size optimization suggestions |
+| `analyze-docker-image-size` | Dockerfile size optimisation suggestions |
 | `analyze-docker-security` | Dockerfile security best practices |
-| `analyze-github-actions-security` | Workflow security issues (injection, permissions) |
+| `analyze-github-actions-security` | Workflow security issues and permission audit |
 | `analyze-package-json-health` | package.json best practices audit |
 
 ### Generation & Scaffolding
-| Tool | Description |
+| Tool | What It Does |
 |------|-------------|
 | `generate-gitignore` | .gitignore from project type and language |
 | `generate-license` | License file from SPDX identifier |
-| `generate-editorconfig` | .editorconfig from language/framework |
+| `generate-editorconfig` | .editorconfig from language and framework |
 | `generate-tsconfig` | tsconfig.json from project requirements |
-| `generate-eslint-config` | ESLint config from preferences |
-| `generate-prettier-config` | Prettier config from style guide |
-| `generate-github-actions` | CI/CD workflow from project type |
+| `generate-eslint-config` | ESLint config from your preferences |
+| `generate-prettier-config` | Prettier config from your style guide |
+| `generate-github-actions` | CI/CD workflows from project type |
 | `generate-docker-compose` | docker-compose.yml from service requirements |
 
 ### Validation & Security
-| Tool | Description |
+| Tool | What It Does |
 |------|-------------|
 | `validate-cron` | Cron expression syntax validation |
 | `validate-semver` | Semantic versioning validation |
-| `validate-jwt` | JWT token decode and validate |
+| `validate-jwt` | JWT token decode and validation |
 | `validate-yaml` | YAML syntax validation with line numbers |
 | `validate-toml` | TOML syntax validation |
 | `validate-dockerfile` | Dockerfile best practices validation |
@@ -180,7 +204,7 @@ mcp-tools/
 ├── packages/
 │   └── core/              # Shared MCP server bootstrap, validation, error handling
 ├── tools/
-│   ├── format-json/       # Each tool is a standalone MCP server
+│   ├── format-json/       # Each tool = standalone MCP server
 │   ├── validate-email/
 │   └── ...
 ├── scripts/
@@ -189,27 +213,31 @@ mcp-tools/
 └── tsconfig.json
 ```
 
-- **Monorepo** managed with pnpm workspaces
-- **Shared core** (`@mcp-tools/core`) for MCP server bootstrap, input validation, and error handling
-- **Each tool** is independently publishable to npm as `@mcp-tools/<name>`
-- **TypeScript** throughout for type safety and broad ecosystem compatibility
-- **Zero external runtime dependencies** where possible — most tools use only Node.js built-ins
+**Key design decisions:**
+
+- **pnpm workspaces** for fast installs and disk-efficient dependency sharing
+- **Shared `@mcp-tools/core`** handles MCP server bootstrap, input validation, and structured error handling so each tool stays focused on its logic
+- **Every tool independently publishable** to npm as `@mcp-tools/<name>`
+- **TypeScript throughout** for type safety and IntelliSense in every tool
+- **Minimal dependencies** — most tools run on Node.js built-ins alone
 
 ---
 
 ## Contributing
 
+We welcome contributions! Add a new tool in minutes:
+
 ```bash
-# Create a new tool from template
+# Scaffold a new tool
 pnpm create-tool <tool-name>
 
 # Build everything
 pnpm build
 
-# Build a single tool
+# Build one tool
 pnpm --filter @mcp-tools/<tool-name> build
 
-# Type check
+# Type check all packages
 pnpm typecheck
 ```
 
@@ -217,4 +245,4 @@ pnpm typecheck
 
 ## License
 
-MIT
+MIT — use it however you like.
