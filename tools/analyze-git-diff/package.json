@@ -1,0 +1,14 @@
+{
+  "name": "@mcp-tools/analyze-git-diff",
+  "version": "0.1.0",
+  "description": "MCP tool server: Analyze git diff output for stats and insights",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": { "@mcp-tools/analyze-git-diff": "dist/index.js" },
+  "scripts": { "build": "tsc", "clean": "rm -rf dist", "typecheck": "tsc --noEmit" },
+  "dependencies": { "@mcp-tools/core": "workspace:*", "@modelcontextprotocol/sdk": "^1.0.0", "zod": "^3.22.0" },
+  "devDependencies": { "typescript": "^5.4.0" },
+  "files": ["dist"],
+  "license": "MIT"
+}

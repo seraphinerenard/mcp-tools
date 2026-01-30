@@ -1,0 +1,24 @@
+{
+  "name": "@mcp-tools/monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "1000+ MCP tool servers monorepo",
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:core": "pnpm --filter @mcp-tools/core build",
+    "build:tools": "pnpm --filter './tools/**' build",
+    "clean": "pnpm -r clean",
+    "typecheck": "pnpm -r typecheck",
+    "create-tool": "tsx scripts/create-tool.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.15.0"
+}
