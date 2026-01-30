@@ -24,14 +24,34 @@ Works out of the box with **Claude Desktop** · **VS Code Copilot** · **Cursor*
 
 ---
 
-## Quick Start
+## Installation
 
-### Prerequisites
+### Option 1: Install a Single Tool (npm)
 
-- [Node.js](https://nodejs.org/) >= 18
-- [pnpm](https://pnpm.io/) >= 9
+Don't need the whole repo? Install just the tool you want:
 
-### Install & Build
+```bash
+npm install @mcp-tools/format-json
+```
+
+Then add it to your MCP client config (e.g. Claude Desktop `claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "format-json": {
+      "command": "npx",
+      "args": ["@mcp-tools/format-json"]
+    }
+  }
+}
+```
+
+Every tool is published independently — install only what you need.
+
+### Option 2: Install Everything (monorepo)
+
+Want the full collection? Clone and build:
 
 ```bash
 git clone https://github.com/seraphinerenard/mcp-tools.git
@@ -40,9 +60,9 @@ pnpm install
 pnpm build
 ```
 
-### Add a Tool to Your AI Assistant
+**Prerequisites:** [Node.js](https://nodejs.org/) >= 18, [pnpm](https://pnpm.io/) >= 9
 
-Each tool is a standalone MCP server. Add any tool to your client config — for example, in Claude Desktop (`claude_desktop_config.json`):
+Then point your MCP client at any tool:
 
 ```json
 {
