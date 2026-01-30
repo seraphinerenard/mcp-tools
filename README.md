@@ -1,4 +1,4 @@
-# ⚡ MCP Tools — Developer Utility Servers for AI Coding Assistants
+# MCP Tools — Developer Utility Servers for AI Coding Assistants
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue?logo=typescript)](https://typescriptlang.org)
@@ -15,12 +15,9 @@ Works out of the box with **Claude Desktop** · **VS Code Copilot** · **Cursor*
 
 ## Why MCP Tools?
 
-🔌 **Plug and play** — each tool is a standalone MCP server, ready in seconds  
-🧰 **Real developer utilities** — formatters, validators, converters, analyzers, generators  
-🪶 **Lightweight** — zero heavy dependencies, most tools use only Node.js built-ins  
-🏗️ **Monorepo architecture** — shared core library, consistent APIs, easy to extend  
-📦 **Independently publishable** — every tool ships as its own npm package  
-🌐 **Cross-platform** — works with any MCP client, not locked to one provider  
+Each tool is its own MCP server. Install one, install ten, install all of them — they work independently and stay out of each other's way. No framework lock-in, no bloated runtimes. Most tools use nothing beyond Node.js built-ins, so they start fast and stay small.
+
+The whole collection lives in a single monorepo with a shared core library, but every package publishes to npm on its own. Use it with Claude Desktop, Copilot, Cursor, or anything else that speaks MCP — we don't care which client you prefer.
 
 ---
 
@@ -83,9 +80,9 @@ node tools/format-json/dist/index.js
 
 ---
 
-## 🟢 Available Tools
+## Available Tools
 
-### 🔍 Analyzers — Code Quality, Security & Performance
+### Analyzers
 
 | Tool | What It Does |
 |------|-------------|
@@ -94,7 +91,7 @@ node tools/format-json/dist/index.js
 | `analyze-git-diff` | Git diff statistics, file-level breakdowns, and change analysis |
 | `analyze-npm-vulnerabilities` | Deep vulnerability scan of package-lock.json |
 
-### 🔄 Converters — Data Transformation & Format Conversion
+### Converters
 
 | Tool | What It Does |
 |------|-------------|
@@ -105,7 +102,7 @@ node tools/format-json/dist/index.js
 | `convert-units` | Convert between length, weight, volume, data, and temperature units |
 | `convert-yaml-to-json` | YAML to JSON with anchor and alias resolution |
 
-### 🎨 Formatters & Minifiers — Clean Up Code in Seconds
+### Formatters & Minifiers
 
 | Tool | What It Does |
 |------|-------------|
@@ -115,7 +112,7 @@ node tools/format-json/dist/index.js
 | `minify-js` | Basic JavaScript minification |
 | `prettify-html` | Auto-indent and format HTML documents |
 
-### 🏭 Generators — Scaffold Files and Data Instantly
+### Generators
 
 | Tool | What It Does |
 |------|-------------|
@@ -125,7 +122,7 @@ node tools/format-json/dist/index.js
 | `generate-regex` | Test strings and retrieve common regex patterns |
 | `generate-uuid` | Generate RFC 4122 v4 UUIDs |
 
-### ✅ Validators — Catch Errors Before They Ship
+### Validators
 
 | Tool | What It Does |
 |------|-------------|
@@ -134,7 +131,7 @@ node tools/format-json/dist/index.js
 | `validate-openapi` | Full OpenAPI 3.x specification validation |
 | `validate-url` | URL parsing, validation, and component extraction |
 
-### 🛠️ Utilities — Everyday Developer Helpers
+### Utilities
 
 | Tool | What It Does |
 |------|-------------|
@@ -147,7 +144,7 @@ node tools/format-json/dist/index.js
 
 ---
 
-## 🟡 Coming Soon — Next 50 Tools
+## Coming Soon
 
 ### Data Transformation
 | Tool | What It Does |
