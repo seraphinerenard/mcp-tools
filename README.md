@@ -17,7 +17,7 @@ Works out of the box with **Claude Desktop** · **VS Code Copilot** · **Cursor*
 
 Each tool is its own MCP server. Install one, install ten, install all of them — they work independently and stay out of each other's way. No framework lock-in, no bloated runtimes. Most tools use nothing beyond Node.js built-ins, so they start fast and stay small.
 
-The whole collection lives in a single monorepo with a shared core library, but every package publishes to npm on its own. Use it with Claude Desktop, Copilot, Cursor, or anything else that speaks MCP — we don't care which client you prefer.
+The whole collection lives in a single monorepo with a shared core library, but every package publishes to npm on its own. Use it with Claude Desktop, Copilot, Cursor, or anything else that speaks MCP.
 
 ---
 
