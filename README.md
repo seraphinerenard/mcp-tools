@@ -82,7 +82,7 @@ node tools/format-json/dist/index.js
 
 ## Available Tools
 
-### Analyzers
+### ![Analyzers](https://img.shields.io/badge/--Analyzers-4a90d9?style=flat-square&logo=searchengin&logoColor=white)
 
 | Tool | What It Does |
 |------|-------------|
@@ -91,7 +91,7 @@ node tools/format-json/dist/index.js
 | `analyze-git-diff` | Git diff statistics, file-level breakdowns, and change analysis |
 | `analyze-npm-vulnerabilities` | Deep vulnerability scan of package-lock.json |
 
-### Converters
+### ![Converters](https://img.shields.io/badge/--Converters-e67e22?style=flat-square&logo=convertio&logoColor=white)
 
 | Tool | What It Does |
 |------|-------------|
@@ -102,7 +102,7 @@ node tools/format-json/dist/index.js
 | `convert-units` | Convert between length, weight, volume, data, and temperature units |
 | `convert-yaml-to-json` | YAML to JSON with anchor and alias resolution |
 
-### Formatters & Minifiers
+### ![Formatters](https://img.shields.io/badge/--Formatters%20%26%20Minifiers-9b59b6?style=flat-square&logo=prettier&logoColor=white)
 
 | Tool | What It Does |
 |------|-------------|
@@ -112,7 +112,7 @@ node tools/format-json/dist/index.js
 | `minify-js` | Basic JavaScript minification |
 | `prettify-html` | Auto-indent and format HTML documents |
 
-### Generators
+### ![Generators](https://img.shields.io/badge/--Generators-27ae60?style=flat-square&logo=stackblitz&logoColor=white)
 
 | Tool | What It Does |
 |------|-------------|
@@ -122,7 +122,7 @@ node tools/format-json/dist/index.js
 | `generate-regex` | Test strings and retrieve common regex patterns |
 | `generate-uuid` | Generate RFC 4122 v4 UUIDs |
 
-### Validators
+### ![Validators](https://img.shields.io/badge/--Validators-2ecc71?style=flat-square&logo=checkmarx&logoColor=white)
 
 | Tool | What It Does |
 |------|-------------|
@@ -131,7 +131,7 @@ node tools/format-json/dist/index.js
 | `validate-openapi` | Full OpenAPI 3.x specification validation |
 | `validate-url` | URL parsing, validation, and component extraction |
 
-### Utilities
+### ![Utilities](https://img.shields.io/badge/--Utilities-e74c3c?style=flat-square&logo=hackthebox&logoColor=white)
 
 | Tool | What It Does |
 |------|-------------|
